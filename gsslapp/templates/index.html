@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Form with Python</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <!-- action="/send" points to your Python Flask route, method="POST" sends the data securely -->
+    <form action="/send" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="user_name" required /><br><br>
+        
+        <label>Email:</label><br>
+        <input type="email" name="user_email" required /><br><br>
+        
+        <label>Message:</label><br>
+        <textarea name="message" rows="4" required></textarea><br><br>
+        
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>

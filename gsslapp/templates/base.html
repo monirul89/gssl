@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Guerilla Security Service Limited — professional security solutions for corporate, industrial, commercial and residential clients in Bangladesh.">
+    <meta name="theme-color" content="#063b22">
+    <title>Guerilla Security Service Limited | Professional Security Solutions</title>
+    <title>{% block title %}Guerilla Security Service Limited | Professional Security Solutions{% endblock %}</title>
+    <link rel="icon" href="{% static 'assets/logo.png' %}" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+<body>
+    <div class="topbar">
+        <div class="container topbar-inner">
+            <span data-en="Government Registration No. RUSC-C-143727/18" data-bn="সরকারি নিবন্ধন নং RUSC-C-143727/18"></span>
+            <div class="top-links">
+                <a href="tel:+8801872604111">01872-604111</a>
+                <a href="mailto:guerillassl@gmail.com">guerillassl@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container nav-wrap">
+            <a class="brand" href="#home" aria-label="Guerilla Security Service Limited">
+                <img src="{% static 'assets/logo.png' %}" alt="GSSL Logo">
+                <div>
+                <strong>GSSL</strong>
+                <span>GUERILLA SECURITY SERVICE LIMITED</span>
+                </div>
+            </a>
+
+            <button class="menu-btn" aria-label="Open menu">☰</button>
+
+            <nav class="nav">
+                <a href="#home" data-en="Home" data-bn="হোম"></a>
+                <a href="#about" data-en="About Us" data-bn="আমাদের সম্পর্কে"></a>
+                <a href="#services" data-en="Services" data-bn="সেবাসমূহ"></a>
+                <a href="#why-us" data-en="Why GSSL" data-bn="কেন GSSL"></a>
+                <a href="#management" data-en="Management" data-bn="পরিচালনা"></a>
+                <a href="#contact" data-en="Contact" data-bn="যোগাযোগ"></a>
+            </nav>
+
+            <div class="language-switch" aria-label="Language selector">
+                <button class="lang active" data-lang="en">EN</button>
+                <button class="lang" data-lang="bn">বাংলা</button>
+            </div>
+        </div>
+    </header>
+
+  <main>
+    {% block content %}
+    
+    {% endblock %}
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand"><img src="{% static 'assets/logo.png' %}" alt="GSSL"><div><strong>GUERILLA SECURITY SERVICE LIMITED</strong><small>GSSL</small></div></div>
+        <p data-en="The valuable assets are yours; The responsibility for security is ours." data-bn="মূল্যবান সম্পদ আপনার; নিরাপত্তার দায়িত্ব আমাদের।"></p>
+      </div>
+      <div>
+        <h4 data-en="Quick Links" data-bn="দ্রুত লিংক"></h4>
+        <a href="#about" data-en="About Us" data-bn="আমাদের সম্পর্কে"></a>
+        <a href="#services" data-en="Services" data-bn="সেবাসমূহ"></a>
+        <a href="#why-us" data-en="Why GSSL" data-bn="কেন GSSL"></a>
+        <a href="#contact" data-en="Contact" data-bn="যোগাযোগ"></a>
+      </div>
+      <div>
+        <h4 data-en="Contact" data-bn="যোগাযোগ"></h4>
+        <a href="tel:+8801872604111">01872-604111</a>
+        <a href="mailto:guerillassl@gmail.com">guerillassl@gmail.com</a>
+        <span>Chashara, Narayanganj</span>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="container"><span>© 2026 Guerilla Security Service Limited. All rights reserved.</span><span>RUSC-C-143727/18</span></div>
+    </div>
+  </footer>
+
+  <script src="{% static 'assets/js/script.js' %}"></script>
+</body>
+</html>
