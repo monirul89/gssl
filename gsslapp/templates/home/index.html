@@ -4,6 +4,33 @@
 
 {% block title %} Guerilla Security Service Limited | Professional Security Solutions {% endblock %}
 
+{% block page_style %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #444;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
     <section id="home" class="hero">
       <div class="hero-glow"></div>
@@ -87,7 +114,25 @@
         </div>
       </div>
     </section>
-
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker" data-en="WHY GSSL" data-bn="কেন GSSL"></div>
+            <h2 data-en="Built on <span>discipline and accountability.</span>" data-bn="<span>শৃঙ্খলা ও জবাবদিহিতার</span> ওপর প্রতিষ্ঠিত।"></h2>
+          </div>
+        </div>
+      </div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          <div class="swiper-slide">Slide 4</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
     <section id="why-us" class="section why">
       <div class="container">
         <div class="section-head">
@@ -172,5 +217,49 @@
         </form>
       </div>
     </section>
+
+{% endblock %}
+{% block footer_script %}
+<!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      new Swiper('.mySwiper', {
+        // modules: [Autoplay],
+        
+        slidesPerView: 1,
+        spaceBetween: 10,
+        
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          '@0.00': {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          '@0.75': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '@1.00': {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          '@1.50': {
+            slidesPerView: 2,
+            spaceBetween: 50,
+          },
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        
+      });
+    </script>
+  <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"ec9a6c21600d4161aa74e6a2c77efad2","r":1,"spa":2}' crossorigin="anonymous"></script>
 
 {% endblock %}

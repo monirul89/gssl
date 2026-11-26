@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+    {% block page_style %} {% endblock %}
+    
 </head>
 <body>
     <div class="topbar">
@@ -85,5 +88,7 @@
   </footer>
 
   <script src="{% static 'assets/js/script.js' %}"></script>
+
+  {% block footer_script %}  {% endblock %}
 </body>
 </html>
